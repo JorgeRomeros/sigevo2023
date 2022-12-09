@@ -1,4 +1,6 @@
 @extends('layouts.simple')
+
+@section('content')
  <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-blog-posts" class="recent-blog-posts">
         <hr>
@@ -45,4 +47,5 @@
             </div>
         </div>
     </section><!-- End Recent Blog Posts Section -->
+    @endsection
 

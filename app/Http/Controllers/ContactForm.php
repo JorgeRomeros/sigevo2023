@@ -14,7 +14,7 @@ class ContactForm extends Controller
      */
     public function index()
     {
-        return view('layouts.simple');
+        return view('layouts.landing');
     }
 
     /**

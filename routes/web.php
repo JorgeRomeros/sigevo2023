@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('login', App\Http\Livewire\Template\Login::class)->name('login');
 // Example Routes
 //Route::view('/','simple');
+Route::view('/', 'landing');
 Route::get('/',[App\Http\Controllers\ContactForm::class,'index']);
 Route::post('/',[App\Http\Controllers\ContactForm::class,'store'])->name('contact.store');
 Route::view('proyectos','layouts.projects');
