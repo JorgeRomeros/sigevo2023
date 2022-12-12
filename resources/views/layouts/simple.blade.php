@@ -48,7 +48,7 @@
     <header id="header" class="header fixed-top" data-scrollto-offset="0">
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <a href="{{ url('/') }}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="assets/img/logo.png" alt=""> -->
             <h1>DELTA PROYECTOS<span>.</span></h1>
@@ -59,9 +59,9 @@
 
             <li><a href="#"><span>Inicio</span></a></li>
 
-            <li><a class="nav-link scrollto" href="index.html#about">Nosotros</a></li>
-            <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
-            <li><a class="nav-link scrollto" href="index.html#contact">Contacto</a></li>
+            <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+            <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->

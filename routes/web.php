@@ -33,4 +33,9 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('users/{user}/edit', App\Http\Livewire\User\UserEdit::class)->name('users.edit')->middleware('can:administrador.update');
     Route::get('roles', App\Http\Livewire\User\RoleList::class)->name('roles')->middleware('can:administrador.read');
     Route::get('settings/{setting}', App\Http\Livewire\AppSetting::class)->name('settings')->middleware('can:administrador.read');
+
+    Route::get('escrito', App\Http\Livewire\Escrito\EscritoList::class)->name('escrito');
+    Route::get('escrito/edit/{escrito}', App\Http\Livewire\Escrito\EscritoEdit::class)->name('escrito.edit');
+
+
 });
