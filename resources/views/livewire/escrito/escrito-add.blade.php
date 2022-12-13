@@ -17,13 +17,13 @@
                             @wire
                             <div class="form-row">
                                 <div class="col-lg-12">
-                                    <x-form-input name="escrito_folio" label="Folio" required />
+                                    <x-form-input name="folio" label="Folio" required />
                                 </div>
                                 <div class="col-lg-12">
-                                    <x-form-input name="escrito_remitente" label="Remitente" />
+                                    <x-form-input name="remitente" label="Remitente" />
                                 </div>
                                 <div class="col-lg-12">
-                                    <x-form-input name="escrito_destinatario" label="Destinatario" />
+                                    <x-form-input name="destinatario" label="Destinatario" />
                                 </div>
                             </div>
                             @endwire

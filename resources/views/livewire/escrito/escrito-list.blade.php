@@ -27,9 +27,9 @@
                         <tbody>
                             @foreach ($escrito as $e)
                             <tr>
-                                <th>{{$e->escrito_folio}}</th>
-                                <th>{{$e->escrito_remitente}}</th>
-                                <th>{{$e->escrito_destinatario}}</th>
+                                <th>{{$e->folio}}</th>
+                                <th>{{$e->remitente}}</th>
+                                <th>{{$e->destinatario}}</th>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{route('escrito.edit',$e->id)}}" class="btn btn-sm text-success" data-bs-toggle="tooltip" title="Editar">

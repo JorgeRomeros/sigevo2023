@@ -14,16 +14,16 @@ class EscritoAdd extends Component
 
     use ModalTrait;
     public $escrito;
-    public $escrito_folio;
-    public $escrito_remitente;
-    public $escrito_destinatario;
+    public $folio;
+    public $remitente;
+    public $destinatario;
 
     protected $listeners = [
 		'newEscrito',
 	];
 
     protected $rules = [
-        'escrito_folio' => 'required'
+        'folio' => 'required'
     ];
 
     public function newEscrito()
@@ -40,11 +40,11 @@ class EscritoAdd extends Component
     public function addEscrito()
     {
         $this->validate();
-        $this->escrito_folio = $this->escrito_folio;
+        $this->folio = $this->folio;
         $this->escrito->fill([
-            'escrito_folio' => $this->escrito_folio,
-            'escrito_remitente' => $this->escrito_remitente,
-            'escrito_destinatario' => $this->escrito_destinatario,
+            'folio' => $this->folio,
+            'remitente' => $this->remitente,
+            'destinatario' => $this->destinatario,
         ]);
         $this->escrito->save();
         $this->emit('escritoListUpdate');

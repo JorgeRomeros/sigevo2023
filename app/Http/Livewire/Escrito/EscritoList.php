@@ -28,7 +28,7 @@ class EscritoList extends Component
     public function render()
     {
         $escrito = Escrito::select('*');
-        
+
         return view('livewire.escrito.escrito-list',['escrito' => $escrito->get()])->extends('layouts.app');
     }
 
@@ -36,4 +36,30 @@ class EscritoList extends Component
     {
         $this->emit('newEscrito');
     }
+
+    public function modalDeleteEscrito($id)
+    {
+        $this->escrito_delete = $id;
+        $this->alert('question', '¿Deseas eliminar este Escrito?', [
+            'timer' => null,
+            'showConfirmButton' => true,
+            'showCancelButton' => true,
+            'confirmButtonText' => 'Si',
+            'cancelButtonText' => 'No',
+            'onDenied' => 'denied',
+            'onDismissed' => 'cancelled',
+            'onConfirmed' => 'confirmed',
+            'confirmButtonColor' => 'red',
+            'position' => 'center',
+            'icon' => 'warning'
+
+        ]);
+    }
+
+    public function confirmed()
+    {
+        Escrito::where('id',$this->escrito_delete)->delete();
+        $this->alert('success', '¡Se ha eliminado el Escrito correctamente!');
+    }
+
 }
