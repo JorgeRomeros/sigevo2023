@@ -15,6 +15,19 @@ return new class extends Migration
     {
         Schema::create('standar_minutes', function (Blueprint $table) {
             $table->id();
+            $table->integer('folio');
+            $table->string('asunto')->nullable();
+            $table->string('tema')->nullable();
+            $table->string('lugar')->nullable();
+            $table->string('tramo')->nullable();
+            $table->string('agenda')->nullable();
+            $table->string('dirigido_a')->nullable();
+            $table->string('fecha_inicio')->nullable();
+            $table->string('hora_inicio')->nullable();
+            $table->string('fecha_proxima_reunion')->nullable();
+            $table->string('hora_programada')->nullable();
+            $table->string('hora_cierre')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

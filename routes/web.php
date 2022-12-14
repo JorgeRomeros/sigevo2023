@@ -37,5 +37,11 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('escrito', App\Http\Livewire\Escrito\EscritoList::class)->name('escrito');
     Route::get('escrito/edit/{escrito}', App\Http\Livewire\Escrito\EscritoEdit::class)->name('escrito.edit');
 
+    Route::get('minuta', App\Http\Livewire\StandarMinute\StandarMinuteList::class)->name('minute');
+    Route::get('minuta/edit/{standarMinute}', App\Http\Livewire\StandarMinute\StandarMinuteEdit::class)->name('standarMinute.edit');
+
+    
+
+
 
 });
