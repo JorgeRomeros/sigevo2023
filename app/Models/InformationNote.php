@@ -11,13 +11,12 @@ class InformationNote extends Model
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-        'area',
-        'asunto',
-        'fecha_informe',
-        'entidad_emite',
-        'entidad_recibe',
-        'aprueba',
-        'enterado',
-        'actividades',
+        'folio',
+        'fecha',
+        'lugar',
+        'elaboro',
+        'dirigido_a',
+        'con_copia_para',
+        'descripcion',
     ];
 }

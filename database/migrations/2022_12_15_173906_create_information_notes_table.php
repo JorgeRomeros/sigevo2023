@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lugar',50)->nullable();
             $table->string('elaboro',50)->nullable();
             $table->string('dirigido_a',50)->nullable();
-            $table->string('c.c.p',50)->nullable();
+            $table->string('con_copia_para',50)->nullable();
             $table->text('descripcion')->nullable();
             $table->softDeletes();
             $table->timestamps();
