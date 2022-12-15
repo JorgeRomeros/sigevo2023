@@ -34,7 +34,7 @@ class DailyReportsEdit extends Component
 
     public function updateDailyReports()
     {
-        $this->DailyReports->update([
+        $this->dailyReports->update([
         'area' => $this->area,
         'asunto' => $this->asunto,
         'fecha_informe' => $this->fecha_informe,

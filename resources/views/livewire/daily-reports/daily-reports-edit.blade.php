@@ -26,7 +26,7 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Folio"  name="folio"/>
+                                        <x-form-input label="Area"  name="area"/>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Tema"  name="asunto"/>
+                                        <x-form-input label="Fecha Informe "  name="fecha_informe" type="date"/>
                                     </div>
                                 </div>
                             </div>
@@ -49,21 +49,21 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Lugar"  name="lugar" />
+                                        <x-form-input label="Entidad Recibe"  name="entidad_recibe" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Tramo"  name="tramo"/>
+                                        <x-form-input label="Aprueba"  name="aprueba"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Fecha Inicio "  name="fecha_inicio" type="date"/>
+                                        <x-form-input label="Entidad emite"  name="entidad_emite"/>
                                     </div>
                                 </div>
                             </div>
@@ -72,45 +72,17 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Agenda"  name="agenda"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="block block-rounded">
-                                    <div class="block-content">
-                                        <x-form-input label="Dirigido A"  name="dirigido_a" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="block block-rounded">
-                                    <div class="block-content">
-                                        <x-form-input label="Hora inicio"  name="hora_inicio"/>
+                                        <x-form-input label="Enterado"  name="enterado"/>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-12 col-md-12">
                                 <div class="block block-rounded">
                                     <div class="block-content">
-                                        <x-form-input label="Proxima Reunion"  name="fecha_proxima_reunion" type="date"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="block block-rounded">
-                                    <div class="block-content">
-                                        <x-form-input label="Hora Programada"  name="hora_programada" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="block block-rounded">
-                                    <div class="block-content">
-                                        <x-form-input label="Hora Cierre"  name="hora_cierre"/>
+                                        <x-form-input label="Actividades"  name="actividades" type="text" placeholder="aqui va el ckeditor :)"/>
                                     </div>
                                 </div>
                             </div>
@@ -161,5 +133,3 @@
         </div>
     </div>
 </div>
-
-
