@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('information_notes', function (Blueprint $table) {
             $table->id();
+            $table->string('folio')->nullable();
+            $table->string('fecha')->nullable();
+            $table->string('lugar',50)->nullable();
+            $table->string('elaboro',50)->nullable();
+            $table->string('dirigido_a',50)->nullable();
+            $table->string('c.c.p',50)->nullable();
+            $table->text('descripcion')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
