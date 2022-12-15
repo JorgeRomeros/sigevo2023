@@ -40,7 +40,10 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('minuta', App\Http\Livewire\StandarMinute\StandarMinuteList::class)->name('minute');
     Route::get('minuta/edit/{standarMinute}', App\Http\Livewire\StandarMinute\StandarMinuteEdit::class)->name('standarMinute.edit');
 
-    
+    Route::get('reporte', App\Http\Livewire\DailyReports\DailyReportsList::class)->name('dailyReports');
+    Route::get('reporte/edit/{dailyReports}', App\Http\Livewire\DailyReports\DailyReportsEdit::class)->name('dailyReports.edit');
+
+
 
 
 

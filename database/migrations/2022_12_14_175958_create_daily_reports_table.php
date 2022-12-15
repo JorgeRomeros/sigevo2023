@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('daily_reports', function (Blueprint $table) {
             $table->id();
+            $table->string('area')->nullable();
+            $table->string('asunto')->nullable();
+            $table->string('fecha_informe')->nullable();
+            $table->string('entidad_emite')->nullable();
+            $table->string('entidad_recibe')->nullable();
+            $table->string('aprueba')->nullable();
+            $table->string('enterado')->nullable();
+            $table->text('actividades')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
