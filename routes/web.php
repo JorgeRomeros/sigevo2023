@@ -43,7 +43,10 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('reporte', App\Http\Livewire\DailyReports\DailyReportsList::class)->name('dailyReports');
     Route::get('reporte/edit/{dailyReports}', App\Http\Livewire\DailyReports\DailyReportsEdit::class)->name('dailyReports.edit');
 
-    Route::get('nota', App\Http\Livewire\InformationNote\InformationNoteList::class)->name('note');
+    Route::get('nota', App\Http\Livewire\InformationNote\InformationNoteList::class)->name('informationNote');
+    Route::get('nota/edit/{informationNote}', App\Http\Livewire\InformationNote\InformationNoteEdit::class)->name('informationNote.edit');
+
+
 
 
 

@@ -2,15 +2,17 @@
 
 namespace App\Http\Livewire\InformationNote;
 
-use Livewire\Component;
 use Carbon\Carbon;
+use Livewire\Component;
 use App\Trait\ModalTrait;
+use App\Models\InformationNote;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class InformationNoteAdd extends Component
 {
     use ModalTrait;
+
     public $informationNote;
     public $folio;
     public $fecha;
@@ -47,6 +49,6 @@ class InformationNoteAdd extends Component
         $this->informationNote->save();
         $this->emit('informationNoteListUpdate');
         $this->close();
-        $this->alert('success', '¡Se ha agregado El Reporte Diario correctamente!');
+        $this->alert('success', '¡Se ha agregado La nota informativa correctamente!');
     }
 }
