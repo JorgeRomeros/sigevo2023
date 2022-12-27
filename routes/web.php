@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'landing');
 Route::get('/',[App\Http\Controllers\ContactForm::class,'index']);
 Route::post('/',[App\Http\Controllers\ContactForm::class,'store'])->name('contact.store');
-Route::view('proyectos','layouts.projects');
 //Route::get('dashboard', App\Http\Livewire\Dashboard::class)->name('profile');
 //Route::match(['get', 'post'], '/dashboard', function(){
     //return view('dashboard');
@@ -29,6 +28,8 @@ Route::view('/pages/blank', 'pages.blank');
 
 Route::group(['middleware' => 'auth:sanctum'], function (){
     //Route::get('dashboard', App\Http\Livewire\Dashboard::class)->name('profile');
+    Route::view('proyectos','layouts.projects');
+
     Route::get('users', App\Http\Livewire\User\UserList::class)->name('users')->middleware('can:administrador.read');
     Route::get('users/{user}/edit', App\Http\Livewire\User\UserEdit::class)->name('users.edit')->middleware('can:administrador.update');
     Route::get('roles', App\Http\Livewire\User\RoleList::class)->name('roles')->middleware('can:administrador.read');
@@ -46,10 +47,5 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('nota', App\Http\Livewire\InformationNote\InformationNoteList::class)->name('informationNote');
     Route::get('nota/edit/{informationNote}', App\Http\Livewire\InformationNote\InformationNoteEdit::class)->name('informationNote.edit');
 
-
-
-
-
-
-
+    Route::get('campo', App\Http\Livewire\FieldNote\FieldNoteList::class)->name('fieldNote');
 });
