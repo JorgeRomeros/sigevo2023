@@ -47,5 +47,7 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('nota', App\Http\Livewire\InformationNote\InformationNoteList::class)->name('informationNote');
     Route::get('nota/edit/{informationNote}', App\Http\Livewire\InformationNote\InformationNoteEdit::class)->name('informationNote.edit');
 
-    Route::get('campo', App\Http\Livewire\FieldNote\FieldNoteList::class)->name('fieldNote');
+    Route::get('notacampo', App\Http\Livewire\FieldNote\FieldNoteList::class)->name('fieldNote');
+    Route::get('notacampo/edit/{fieldNote}', App\Http\Livewire\FieldNote\FieldNoteEdit::class)->name('fieldNote.edit');
+
 });

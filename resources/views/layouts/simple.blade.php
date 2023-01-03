@@ -57,11 +57,11 @@
         <nav id="navbar" class="navbar">
             <ul>
 
-            <li><a href="#"><span>Inicio</span></a></li>
+            <li><a href="{{ url('/#') }}"><span>Inicio</span></a></li>
 
-            <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
-            <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+            <li><a class="nav-link scrollto" href="{{ url('/#about') }}">Nosotros</a></li>
+            <li><a class="nav-link scrollto" href="{{ url('/#services') }}">Servicios</a></li>
+            <li><a class="nav-link scrollto" href="{{ url('/#contact') }}">Contacto</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
