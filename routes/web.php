@@ -29,6 +29,7 @@ Route::view('/pages/blank', 'pages.blank');
 Route::group(['middleware' => 'auth:sanctum'], function (){
     //Route::get('dashboard', App\Http\Livewire\Dashboard::class)->name('profile');
     Route::view('proyectos','layouts.projects');
+    Route::view('formatos','formats');
 
     Route::get('users', App\Http\Livewire\User\UserList::class)->name('users')->middleware('can:administrador.read');
     Route::get('users/{user}/edit', App\Http\Livewire\User\UserEdit::class)->name('users.edit')->middleware('can:administrador.update');
@@ -49,5 +50,8 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
 
     Route::get('notacampo', App\Http\Livewire\FieldNote\FieldNoteList::class)->name('fieldNote');
     Route::get('notacampo/edit/{fieldNote}', App\Http\Livewire\FieldNote\FieldNoteEdit::class)->name('fieldNote.edit');
+
+    Route::get('semanal', App\Http\Livewire\WeeklyReport\WeeklyReportList::class)->name('weeklyReport');
+    Route::get('semanal/edit/{weeklyReport}', App\Http\Livewire\WeeklyReport\WeeklyReportEdit::class)->name('weeklyReport.edit');
 
 });

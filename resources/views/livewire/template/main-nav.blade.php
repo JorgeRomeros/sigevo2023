@@ -55,22 +55,28 @@
                         <span class="nav-main-link-name">Examples</span>
                         </a>
                         <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="/pages/datatables">
-                            <span class="nav-main-link-name">DataTables</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/slick') ? ' active' : '' }}" href="/pages/slick">
-                            <span class="nav-main-link-name">Slick Slider</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="/pages/blank">
-                            <span class="nav-main-link-name">Blank</span>
-                            </a>
-                        </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="/pages/datatables">
+                                <span class="nav-main-link-name">DataTables</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link{{ request()->is('pages/slick') ? ' active' : '' }}" href="/pages/slick">
+                                <span class="nav-main-link-name">Slick Slider</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="/pages/blank">
+                                <span class="nav-main-link-name">Blank</span>
+                                </a>
+                            </li>
                         </ul>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="/formatos">
+                                <i class="nav-main-link-icon fab fa-wpforms"></i>
+                                <span class="nav-main-link-name">Formatos</span>
+                            </a>
+                        </li>
                     </li>
                     @can('administrador.read')
                     <li class="nav-main-heading">Configuración</li>
@@ -98,8 +104,11 @@
                             <span class="nav-main-link-name">Configuración</span>
                         </a>
                     </li>
+
                     @endcan
+
                 </ul>
+
             </div>
             <!-- END Side Navigation -->
         </div>
