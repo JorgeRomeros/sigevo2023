@@ -54,4 +54,6 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('semanal', App\Http\Livewire\WeeklyReport\WeeklyReportList::class)->name('weeklyReport');
     Route::get('semanal/edit/{weeklyReport}', App\Http\Livewire\WeeklyReport\WeeklyReportEdit::class)->name('weeklyReport.edit');
 
+    Route::get('mensual', App\Http\Livewire\MonthlyReport\MonthlyReportList::class)->name('monthlyReport');
+    Route::get('mensual/edit/{monthlyReport}', App\Http\Livewire\MonthlyReport\MonthlyReportEdit::class)->name('monthlyReport.edit');
 });
