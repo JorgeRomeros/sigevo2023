@@ -56,4 +56,7 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
 
     Route::get('mensual', App\Http\Livewire\MonthlyReport\MonthlyReportList::class)->name('monthlyReport');
     Route::get('mensual/edit/{monthlyReport}', App\Http\Livewire\MonthlyReport\MonthlyReportEdit::class)->name('monthlyReport.edit');
+
+    Route::post('images', [App\Http\Controllers\ImageController::class,'store'])->name('images.store');
+
 });
