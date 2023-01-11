@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('contenido')->nullable();
             $table->string('ccp',50)->nullable();
             $table->string('elaboro',50)->nullable();
+            
             $table->softDeletes();
             $table->timestamps();
         });

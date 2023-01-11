@@ -83,9 +83,21 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
+                                    <div class="block-content p-0">
+                                        @wire
+                                        <div class="row push">
+                                            <div class="col-lg-12" wire:ignore wire:key="MyId">
+                                                <div class="toolbar-container"></div>
+                                                    <div id="archivo_contenido" name="dm-post-edit-body" style="height: 500px;">
+                                                        {!! $descripcion !!}
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        @endwire
+                                    </div>
                                     <div class="block block-rounded">
                                         <div class="block-content">
-                                            <x-form-input label="descripcion"  name="descripcion" type="text" placeholder="aqui va el ckeditor :)"/>
+                                            <x-form-input label="descripcion"  name="descripcion" type="text" id="descripcion" placeholder="aqui va el ckeditor :)"/>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +141,7 @@
         </div>
     </div>
         @push('scripts')
-            <script src="{{ asset('js/plugins/ckeditor5-build-decoupled-document/ckeditor.js') }}"></script>
+            <script src="{{ asset('js/plugins/ckeditor5-document/ckeditor.js') }}"></script>
             <script src="{{ asset('js/plugins/dropzone/min/dropzone.min.js') }}"></script>
 
             <script>

@@ -8,11 +8,14 @@ use Livewire\Component;
 use App\Trait\ModalTrait;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 
 class EscritoAdd extends Component
 {
 
     use ModalTrait;
+    use WithFileUploads;
+    
     public $escrito;
     public $folio;
     public $remitente;

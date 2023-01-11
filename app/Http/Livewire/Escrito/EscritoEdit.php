@@ -5,12 +5,15 @@ namespace App\Http\Livewire\Escrito;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Escrito;
+use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 
 class EscritoEdit extends Component
 {
 
     use LivewireAlert;
-
+    use WithFileUploads;
+    
     public Escrito $escrito;
     public $folio;
     public $remitente;
@@ -21,6 +24,8 @@ class EscritoEdit extends Component
     public $contenido;
     public $ccp;
     public $elaboro;
+
+    public $file_content;
 
     public function mount()
     {
@@ -33,6 +38,7 @@ class EscritoEdit extends Component
         $this->contenido = $this->escrito->contenido;
         $this->ccp = $this->escrito->ccp;
         $this->elaboro = $this->escrito->elaboro;
+        $this->file_content = $this->escrito->file_content;
     }
 
     public function render()
